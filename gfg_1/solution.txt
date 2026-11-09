@@ -18,20 +18,20 @@ public:
         while(i < s.length()) {
             int j = i;
 
-            // Find the delimiter "/:"
+           
             while(s.substr(j, 2) != "/:") {
                 j++;
             }
 
-            // Get the length of the original string
+         
             int len = stoi(s.substr(i, j-i));
 
-            // Extract the original string
+          
             string word = s.substr(j+2, len);
 
             ans.push_back(word);
 
-            // Move to the next encoded string
+         
             i = j + 2 + len;
         }
 
